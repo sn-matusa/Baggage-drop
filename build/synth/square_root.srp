@@ -1,0 +1,495 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tester.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tester"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : square_root
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\facultate\A321\AC\tema1\Matusa_Sebastian-Nicolae_331AA-tema1\baggage_drop.v" into library work
+Parsing module <baggage_drop>.
+Analyzing Verilog file "D:\facultate\A321\AC\tema1\Matusa_Sebastian-Nicolae_331AA-tema1\display_and_drop.v" into library work
+Parsing module <display_and_drop>.
+Analyzing Verilog file "D:\facultate\A321\AC\tema1\Matusa_Sebastian-Nicolae_331AA-tema1\sensors_input.v" into library work
+Parsing module <sensors_input>.
+Analyzing Verilog file "D:\facultate\A321\AC\tema1\Matusa_Sebastian-Nicolae_331AA-tema1\square_root.v" into library work
+Parsing module <square_root>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <square_root>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <square_root>.
+    Related source file is "D:\facultate\A321\AC\tema1\Matusa_Sebastian-Nicolae_331AA-tema1\square_root.v".
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_16_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_21_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_26_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_31_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_36_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_41_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_46_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_51_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_56_OUT> created at line 35.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_2_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_7_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_12_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_17_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_22_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_27_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_32_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_37_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_42_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_47_OUT> created at line 33.
+    Found 16-bit adder for signal <GND_1_o_GND_1_o_add_52_OUT> created at line 33.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_3_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_8_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_13_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_18_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_23_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_28_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_33_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_38_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_43_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_48_OUT> created at line 34.
+    Found 16x16-bit multiplier for signal <GND_1_o_GND_1_o_MuLt_53_OUT> created at line 34.
+    Found 24-bit comparator greater for signal <in[7]_GND_1_o_LessThan_1_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_5_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_10_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_15_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_20_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_25_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_30_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_35_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_40_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_45_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_50_o> created at line 34
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_55_o> created at line 34
+    Summary:
+	inferred  11 Multiplier(s).
+	inferred  22 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <square_root> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 11
+ 16x16-bit multiplier                                  : 11
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 11
+ 16-bit subtractor                                     : 11
+# Comparators                                          : 12
+ 24-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 11
+# Multiplexers                                         : 11
+ 16-bit 2-to-1 multiplexer                             : 11
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 11
+ 16x16-bit multiplier                                  : 11
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 11
+ 16-bit subtractor                                     : 11
+# Comparators                                          : 12
+ 24-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 11
+# Multiplexers                                         : 11
+ 16-bit 2-to-1 multiplexer                             : 11
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <square_root> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block square_root, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tester.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 311
+#      GND                         : 1
+#      LUT2                        : 89
+#      LUT4                        : 66
+#      MUXCY                       : 154
+#      VCC                         : 1
+# IO Buffers                       : 24
+#      IBUF                        : 8
+#      OBUF                        : 16
+# MULTs                            : 11
+#      MULT18X18SIO                : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       78  out of   4656     1%  
+ Number of 4 input LUTs:                155  out of   9312     1%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
+ Number of MULT18X18SIOs:                11  out of     20    55%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 98.879ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 20233220345295507000 / 12
+-------------------------------------------------------------------------
+Delay:               98.879ns (Levels of Logic = 146)
+  Source:            in<7> (PAD)
+  Destination:       out<0> (PAD)
+
+  Data Path: in<7> to out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.218   1.136  in_7_IBUF (in_7_IBUF)
+     LUT2:I0->O           23   0.704   1.202  _n01401 (out_11_OBUF)
+     MULT18X18SIO:A11->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_3_OUT (GND_1_o_GND_1_o_MuLt_3_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<12>)
+     MUXCY:CI->O          21   0.459   1.128  Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_5_o_cy<13>)
+     MULT18X18SIO:A10->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_8_OUT (GND_1_o_GND_1_o_MuLt_8_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<12>)
+     MUXCY:CI->O          19   0.459   1.085  Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_10_o_cy<13>)
+     MULT18X18SIO:A9->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_13_OUT (GND_1_o_GND_1_o_MuLt_13_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<12>)
+     MUXCY:CI->O          17   0.459   1.051  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<13>)
+     MULT18X18SIO:A8->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_18_OUT (GND_1_o_GND_1_o_MuLt_18_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<12>)
+     MUXCY:CI->O          15   0.459   1.017  Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_20_o_cy<13>)
+     MULT18X18SIO:A7->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_23_OUT (GND_1_o_GND_1_o_MuLt_23_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<12>)
+     MUXCY:CI->O          13   0.459   0.983  Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_25_o_cy<13>)
+     MULT18X18SIO:A6->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_28_OUT (GND_1_o_GND_1_o_MuLt_28_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<12>)
+     MUXCY:CI->O          11   0.459   0.933  Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_30_o_cy<13>)
+     MULT18X18SIO:A5->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_33_OUT (GND_1_o_GND_1_o_MuLt_33_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<12>)
+     MUXCY:CI->O           9   0.459   0.820  Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_35_o_cy<13>)
+     MULT18X18SIO:A4->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_38_OUT (GND_1_o_GND_1_o_MuLt_38_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<12>)
+     MUXCY:CI->O           7   0.459   0.708  Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_40_o_cy<13>)
+     MULT18X18SIO:A3->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_43_OUT (GND_1_o_GND_1_o_MuLt_43_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<12>)
+     MUXCY:CI->O           5   0.459   0.633  Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_45_o_cy<13>)
+     MULT18X18SIO:A2->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_48_OUT (GND_1_o_GND_1_o_MuLt_48_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<12>)
+     MUXCY:CI->O           3   0.459   0.531  Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_50_o_cy<13>)
+     MULT18X18SIO:A1->P16    1   4.860   0.499  Mmult_GND_1_o_GND_1_o_MuLt_53_OUT (GND_1_o_GND_1_o_MuLt_53_OUT<16>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_lut<4> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<12> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<12>)
+     MUXCY:CI->O           1   0.459   0.420  Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<13> (Mcompar_GND_1_o_GND_1_o_LessThan_55_o_cy<13>)
+     OBUF:I->O                 3.272          out_0_OBUF (out<0>)
+    ----------------------------------------
+    Total                     98.879ns (81.743ns logic, 17.136ns route)
+                                       (82.7% logic, 17.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.94 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 4469976 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
